@@ -79,15 +79,21 @@
 
     private async Task DeleteUser(int id)
     {
+        await AppInsights.TrackEvent("DeleteUser");
+
+        Logger.LogInformation("Clicked button for deleting user with id: {Id}", id);
         var response = await Client.DeleteAsync($"api/v1/user/{id}");
         if (response.IsSuccessStatusCode)
         {
             await LoadData();
         }
+        await AppInsights.Flush();
     }
 
     private async Task AddUser()
     {
+        await AppInsights.TrackEvent("CreateUser");
+
         Logger.LogInformation("Clicked button for adding user: {Firstname} {Lastname}",
             _userRequest.Firstname, _userRequest.Lastname);
         var response = await Client.PostAsJsonAsync("api/v1/user", _userRequest);
@@ -96,6 +102,7 @@
             await LoadData();
             _userRequest = new CreateUserRequest();
         }
+        await AppInsights.Flush();
     }
 
 }

@@ -20,17 +20,6 @@ else
 // Add Logging Providers
 builder.Services.AddSingleton(typeof(ILoggerAdapter<>), typeof(LoggerAdapter<>));
 
-builder.Services.AddBlazorApplicationInsights(async applicationInsights =>
-{
-    var telemetryItem = new TelemetryItem()
-    {
-        Tags = new Dictionary<string, object>()
-        {
-            { "ai.cloud.role", "SPA" },
-            { "ai.cloud.roleInstance", "Blazor Wasm" },
-        }
-    };
-    await applicationInsights.AddTelemetryInitializer(telemetryItem);
-});
+builder.Services.AddBlazorApplicationInsights();
 
 await builder.Build().RunAsync();

@@ -2,6 +2,7 @@
 using Log.Api.Models;
 using Log.Api.Persistence;
 using Log.Api.Services;
+using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Log.Api.Controllers;
@@ -11,11 +12,13 @@ public class UserController : ControllerBase
 {
     private readonly IUserRepository _userRepository;
     private readonly ILoggerAdapter<UserController> _logger;
+    private readonly TelemetryClient _telemetryClient;
 
-    public UserController(IUserRepository userRepository, ILoggerAdapter<UserController> logger)
+    public UserController(IUserRepository userRepository, ILoggerAdapter<UserController> logger, TelemetryClient telemetryClient)
     {
         _userRepository = userRepository;
         _logger = logger;
+        _telemetryClient = telemetryClient;
     }
     
     
@@ -54,6 +57,7 @@ public class UserController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddAsync([FromBody]CreateUserRequest request)
     {
+        _telemetryClient.TrackEvent("CreateUser");
         var user = new User
         {
             Firstname = request.Firstname,
