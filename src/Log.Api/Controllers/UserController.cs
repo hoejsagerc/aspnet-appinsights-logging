@@ -4,6 +4,7 @@ using Log.Api.Persistence;
 using Log.Api.Services;
 using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Log.Api.Controllers;
 
@@ -57,7 +58,8 @@ public class UserController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddAsync([FromBody]CreateUserRequest request)
     {
-        _telemetryClient.TrackEvent("CreateUser");
+        _telemetryClient.TrackEvent("CreateUser1", new Dictionary<string, string> {{"request", JsonSerializer.Serialize(request)}});
+        
         var user = new User
         {
             Firstname = request.Firstname,

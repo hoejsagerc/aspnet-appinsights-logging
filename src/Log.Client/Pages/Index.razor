@@ -68,7 +68,10 @@
     {
         try
         {
+            var stopwatch = new System.Diagnostics.Stopwatch();
             _users = await Client.GetFromJsonAsync<List<User>>("api/v1/user");
+            stopwatch.Stop();
+            await AppInsights.TrackMetric("LoadDataTimeInSeconds", stopwatch.Elapsed.TotalMilliseconds);
         }
         catch (Exception e)
         {
@@ -79,7 +82,8 @@
 
     private async Task DeleteUser(int id)
     {
-        await AppInsights.TrackEvent("DeleteUser");
+        await AppInsights.TrackEvent("DeleteUser", new Dictionary<string, object?> {{"UserId", id}});
+        await AppInsights.TrackMetric("DeleteUser", 1);
 
         Logger.LogInformation("Clicked button for deleting user with id: {Id}", id);
         var response = await Client.DeleteAsync($"api/v1/user/{id}");
@@ -92,7 +96,8 @@
 
     private async Task AddUser()
     {
-        await AppInsights.TrackEvent("CreateUser");
+        // await AppInsights.TrackEvent("CreateUser", new Dictionary<string, object?> {{"User", _userRequest}});
+        await AppInsights.TrackMetric("CreateUser", );
 
         Logger.LogInformation("Clicked button for adding user: {Firstname} {Lastname}",
             _userRequest.Firstname, _userRequest.Lastname);
