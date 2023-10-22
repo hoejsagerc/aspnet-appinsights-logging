@@ -1,0 +1,22 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "dockerhub-credentials",
+    "namespace": "test",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "dockerhub-credentials",
+        "namespace": "test",
+        "creationTimestamp": null
+      },
+      "type": "kubernetes.io/dockerconfigjson"
+    },
+    "encryptedData": {
+      ".dockerconfigjson": "AgB6Bq3nzUrdcAZ92sWCIJDqLRsrk7ob9fSAI4CmKUm4hR3f3k4w0MlB9QlSegORWq9lviBb5I9xtA7JV8qSw54ljphnNp0Y7oLZQmaMHUM3iodiJ+HPY6VFq0Mh9/E5wfX3reqBu2DOTxFNMpFA3YZUZ0rd2ytSvT4g2xSfH7j/wAeq+Apb3Fx8eidedhSfooLrdsGvCHbWaph/g/LqEOvsKsEBheaGS5rYO3+XtO231LevMgXtkzNT1WXtryqRn2EQYuhU3qIpQfE/RMyR+kr1gmdg5ZGCSxPx9shAQAyCoXDnCBFXSa8Qc1QDWNdrhJGKp9y8g/1vdBbfUavmoShW9TLgCMb02lygQq1Jf/fmgyPQdKi1sgYSzF3GBzw/5DccbdJAAfEHqUuaPV9P9UkXDgqt9jK+7QM+BVBWyT8mmhvIxv0F+4ZSRU9Y2yCoVH56aG2JsXlczm6bigIQ7wyomrO3ZeT6mKDuXefj7s76W2TAmaDFAyiOqnpwvbaaZHnDuS5hPTF6BbnBRchkhjbiok/VvW8eKNWPMOu2aDoKJ6/+SEd7/+TxNvl8Kb1Bd5UTwgb93OZhbWi+FQwe/0oSCg3X+H9x4HUulPUM6hY9RW/FmVrAanQK9+CtoTZrurXjOgLtmBLzpK5cCs3xEhmYwLAevRAjpX4IkvagYXwtTN1WMze8+PxlD+sbdg3EMT5SiqIV6i67pyb89fP2BxzqSc2I3vyrrXoWAOU83p6zvFGKcEF7vAMreovZAxvWqpWSOLPfqRZAxjCYicMpfJdMij6qlTgU+M0TZpZ6+umdgDUJggL+2m1nbIolwg5sA6yeOeL96yrZjmWzOxannGAWQYn3ijpBS3gC1zDPRr93iNg93Wc7AElZalq7AK37seDcUBRRpsZtYng/AoDUaIFy7UwLPwr5il5fnFzAdVuHgrEZ24rC+lNZrrCJWMhj2w=="
+    }
+  }
+}

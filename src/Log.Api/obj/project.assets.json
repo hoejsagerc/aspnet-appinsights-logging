@@ -4792,23 +4792,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chho\\.nuget\\packages\\": {},
+    "C:\\Users\\chris\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chho\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\Log.Api.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\Log.Api.csproj",
       "projectName": "Log.Api",
-      "projectPath": "C:\\Users\\chho\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\Log.Api.csproj",
-      "packagesPath": "C:\\Users\\chho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chho\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\obj\\",
+      "projectPath": "C:\\Users\\chris\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\Log.Api.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4816,9 +4816,10 @@
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/edgemo/_packaging/Edgemo.com/nuget/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -4900,7 +4901,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
