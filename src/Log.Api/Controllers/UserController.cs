@@ -1,10 +1,12 @@
-﻿using Log.Api.Contracts;
+﻿using System.Text.Encodings.Web;
+using Log.Api.Contracts;
 using Log.Api.Models;
 using Log.Api.Persistence;
 using Log.Api.Services;
 using Microsoft.ApplicationInsights;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Text.Unicode;
 
 namespace Log.Api.Controllers;
 
@@ -58,7 +60,15 @@ public class UserController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddAsync([FromBody]CreateUserRequest request)
     {
-        _telemetryClient.TrackEvent("CreateUser1", new Dictionary<string, string> {{"request", JsonSerializer.Serialize(request)}});
+        _telemetryClient.TrackEvent("Backend.CreateUser", new Dictionary<string, string> {{"request", 
+            JsonSerializer.Serialize(
+                    request, 
+                    new JsonSerializerOptions
+                    {
+                        Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
+                    })
+            
+        }});
         
         var user = new User
         {

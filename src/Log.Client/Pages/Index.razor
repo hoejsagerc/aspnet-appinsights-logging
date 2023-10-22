@@ -96,8 +96,8 @@
 
     private async Task AddUser()
     {
-        // await AppInsights.TrackEvent("CreateUser", new Dictionary<string, object?> {{"User", _userRequest}});
-        await AppInsights.TrackMetric("CreateUser", );
+        await AppInsights.TrackEvent("CreateUser", new Dictionary<string, object?> {{"User", _userRequest}});
+        // await AppInsights.TrackMetric("CreateUser", );
 
         Logger.LogInformation("Clicked button for adding user: {Firstname} {Lastname}",
             _userRequest.Firstname, _userRequest.Lastname);

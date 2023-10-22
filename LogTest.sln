@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Api", "src\Log.Api\Log.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Client", "src\Log.Client\Log.Client.csproj", "{42544764-6F8E-4A12-999C-75978A425843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Clientv2", "src\Log.Clientv2\Log.Clientv2.csproj", "{6028B610-855C-4853-A1D8-B7FEF0CE13FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{42544764-6F8E-4A12-999C-75978A425843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42544764-6F8E-4A12-999C-75978A425843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42544764-6F8E-4A12-999C-75978A425843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6028B610-855C-4853-A1D8-B7FEF0CE13FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6028B610-855C-4853-A1D8-B7FEF0CE13FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6028B610-855C-4853-A1D8-B7FEF0CE13FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6028B610-855C-4853-A1D8-B7FEF0CE13FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D5E3141E-4B3B-4776-8DAB-6DDFB750045B} = {560F5C0C-A03C-4031-8A7C-7C5D8319CC92}
 		{42544764-6F8E-4A12-999C-75978A425843} = {560F5C0C-A03C-4031-8A7C-7C5D8319CC92}
+		{6028B610-855C-4853-A1D8-B7FEF0CE13FE} = {560F5C0C-A03C-4031-8A7C-7C5D8319CC92}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tuzVS2+drIFTwiMNTIjuacSMdiggmgmrAiCjZzenjBbU3FBTzdmjeuiTpPb0RL0E1tIFfCr8ZE4cfVW+5SFufA==",
+  "dgSpecHash": "uRBM9o2FjN9U+MF008Q7SXRlp80ZTWysaFB42gTfjLj6wZjWRcNnxNhw/zjPssVHICKAr/Antpt5/uMUw5eDNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\chho\\dev\\repos\\aspnet-appinsights-logging\\src\\Log.Client\\Log.Client.csproj",
   "expectedPackageFiles": [
